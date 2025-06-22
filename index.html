@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collaborative Document Editor</title>
+  <link rel="stylesheet" href="stylee.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="editor-container">
+    <h1><i class="fas fa-file-alt"></i> Collaborative Document Editor</h1>
+
+    <div class="toolbar">
+      <div class="group">
+        <span>Text Format:</span>
+        <button onclick="execCmd('bold')" title="Bold"><i class="fas fa-bold"></i></button>
+        <button onclick="execCmd('italic')" title="Italic"><i class="fas fa-italic"></i></button>
+        <button onclick="execCmd('underline')" title="Underline"><i class="fas fa-underline"></i></button>
+      </div>
+
+      <div class="group">
+        <span>Lists:</span>
+        <button onclick="execCmd('insertUnorderedList')" title="Bullet List"><i class="fas fa-list-ul"></i></button>
+        <button onclick="execCmd('insertOrderedList')" title="Numbered List"><i class="fas fa-list-ol"></i></button>
+      </div>
+
+      <div class="group">
+        <span>Links:</span>
+        <button onclick="execCmd('createLink')" title="Insert Link"><i class="fas fa-link"></i></button>
+        <button onclick="execCmd('removeFormat')" title="Remove Formatting"><i class="fas fa-wand-magic"></i></button>
+      </div>
+    </div>
+
+    <div id="editor" contenteditable="true" spellcheck="true">Start typing...</div>
+
+    <div class="actions">
+      <button class="save" onclick="saveDoc()"><i class="fas fa-save"></i> Save</button>
+      <button class="load" onclick="loadDoc()"><i class="fas fa-folder-open"></i> Load</button>
+      <button class="clear" onclick="clearDoc()"><i class="fas fa-trash"></i> Clear</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

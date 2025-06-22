@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #fbcfe8, #fee2e2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.editor-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0f3c4b;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.group span {
+  font-weight: bold;
+  color: #444;
+}
+
+.group button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.group button:hover {
+  background-color: #e11d48;
+  color: white;
+}
+
+#editor {
+  min-height: 250px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.actions .save {
+  background-color: #dc2626;
+}
+
+.actions .load {
+  background-color: #0f766e;
+}
+
+.actions .clear {
+  background-color: #fb923c;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
